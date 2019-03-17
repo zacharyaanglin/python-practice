@@ -24,7 +24,7 @@ class Person(abc.ABC):
 class Anglin(Person):
 
     def __init__(self, name: Name):
-        self.name = Name
+        self.name = name
         self.last = 'Anglin'
     
     @staticmethod
