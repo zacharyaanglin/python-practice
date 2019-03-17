@@ -1,3 +1,5 @@
+"""Solution to Euler problem 16"""
+# pylint: disable=no-value-for-parameter
 import click
 
 from library.helpers import print_, sum_string
