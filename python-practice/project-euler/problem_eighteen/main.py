@@ -1,0 +1,2 @@
+"""Solve Euler problem eighteen."""
+
