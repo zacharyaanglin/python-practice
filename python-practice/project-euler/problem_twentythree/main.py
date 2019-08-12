@@ -30,12 +30,12 @@ def can_be_sum_of_two_nums(num: int, num_list: List[int], num_set: Set[int]) -> 
 
 
 if __name__ == "__main__":
-    abundant_numbers = [i for i in range(1, 28123) if is_abundant(i)]
+    abundant_numbers = [i for i in range(1, 28_123) if is_abundant(i)]
     abundant_set = set(abundant_numbers)
     print(
         sum(
             x
-            for x in range(1, 28123)
+            for x in range(1, 28_123)
             if not can_be_sum_of_two_nums(x, abundant_numbers, abundant_set)
         )
     )
