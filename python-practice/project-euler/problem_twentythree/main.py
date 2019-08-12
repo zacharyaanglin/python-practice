@@ -1,4 +1,4 @@
-"""Solve Euler problem 23: https://projecteuler.net/problem=23"""
+"""Solve Euler problem 23: https://projecteuler.net/problem=23."""
 from typing import List
 
 import numpy as np
