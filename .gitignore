@@ -4,3 +4,5 @@ python-practice/project-euler/problem_twentythree/__pycache__/test.cpython-37-PY
 python-practice/project-euler/problem_twentythree/.mypy_cache/3.7/main.data.json
 .gitignore
 python-practice/project-euler/problem_twentythree/.mypy_cache/3.7/main.meta.json
+python-practice/project-euler/problem_twentysix/__pycache__/main.cpython-37.pyc
+python-practice/project-euler/problem_twentysix/__pycache__/test.cpython-37-PYTEST.pyc
