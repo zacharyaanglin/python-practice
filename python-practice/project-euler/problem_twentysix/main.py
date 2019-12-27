@@ -1,7 +1,8 @@
 """Solve Euler problem 26: https://projecteuler.net/problem=26"""
 import decimal
+import itertools
 
-PRECISION: int = 150
+PRECISION: int = 5_000
 
 
 def get_long_string_fraction(numerator: int, denominator: int):
@@ -12,6 +13,17 @@ def get_long_string_fraction(numerator: int, denominator: int):
 
 
 def repeating_sequence(string: str):
+    sequence = _repeating_sequence(string)
+    if sequence == (new_sequence := _repeating_sequence(sequence)):
+        return sequence
+    while new_sequence != sequence:
+        sequence = new_sequence
+        new_sequence = _repeating_sequence(sequence)
+
+    return new_sequence
+        
+
+def _repeating_sequence(string: str):
     """Return the longest repeating sequence in a string."""
     for j in range(0, len(string)):
         substring = string[j:]
@@ -21,7 +33,21 @@ def repeating_sequence(string: str):
                 and substring[: int(i / 2)] * 2 != substring[:i]
             ):
                 return substring[:i]
-    return 1
+    
+    if len(substring) > 1:
+        return one_term_repeating_sequence(substring)
+    
+    if len(string) > 1 and string[-2] == substring:
+        return one_term_repeating_sequence(string)
+    return string
+
+
+def one_term_repeating_sequence(string: str):
+    """Find a one-term repeating sequence."""
+    if string == "".join(itertools.repeat(string[-1], len(string))):
+        return string[-1]
+
+    return string
 
 
 if __name__ == "__main__":
