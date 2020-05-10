@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "problem_twentyseven"
+version = "0.1.0"
+description = "A solution to Euler project problem 27"
+authors = ["Zachary Anglin <zachary@anglin.com>"]
+license = "Beerware"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.0.3"
+sympy = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
